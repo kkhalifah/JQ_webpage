@@ -51,7 +51,7 @@ body {
 }
 
 .banner {
-    margin-left: 2rem;
+    margin-left: 8rem;
     border-left: 0.5rem solid var(--teal); 
     z-index: 1;
 }
@@ -124,10 +124,26 @@ body {
         transform: scale(1.0);
     }
 }
+.nav {
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.53);
+    z-index: 4;
+}
 
+.nav-links {
+    list-style-type: none;  
+}
 
-
-
+.nav-single-link {
+    display: block;
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
 
 
 
