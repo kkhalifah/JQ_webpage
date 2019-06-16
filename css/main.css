@@ -46,13 +46,14 @@ body {
 
 @media screen and (max-width:768px) {
     .header {
-        background: url('../video/snow_screengrab.png')center/cover fixed no-repeat;
+        background: url('../video/snow_screengrab_white.png')center/cover fixed no-repeat;
     }
 }
 
 .banner {
     margin-left: 2rem;
     border-left: 0.5rem solid var(--teal); 
+    z-index: 1;
 }
 
 .banner-title {
@@ -60,7 +61,8 @@ body {
     letter-spacing: 0.25 rem;
     margin-left: 1rem;
     text-transform: uppercase;
-    color: var(--blue);   
+    color: var(--blue); 
+    
 }
 
 .banner-title-name{
@@ -69,3 +71,73 @@ body {
     font-style: italic;
     text-decoration: underline;
 }
+
+/*video*/
+
+.video-container {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+/*    z-index: 3;*/
+}
+
+/*navbar*/
+.nav-btn {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    font-size: 3rem;
+    color: var(--teal);
+    z-index: 3;
+    cursor: pointer;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse{
+    0%{
+       transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
