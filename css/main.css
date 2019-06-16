@@ -131,6 +131,9 @@ body {
     height: 100%;
     background-color: rgba(255, 255, 0, 0.53);
     z-index: 4;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
 }
 
 .nav-links {
@@ -143,17 +146,91 @@ body {
     color: var(--blue);
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
 }
 
+.nav-single-link:hover {
+    background: var(--blue);
+    color: var(--yellow);
+    padding-left: 1.5rem;
+}
 
+.nav-show {
+    width: 7.5rem;
+}
 
+/*social icons*/
+.social-icons {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+}
 
+.social-icon {
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all 1s ease-out;
+}
 
+.social-icon:hover {
+    color: var(--teal)
+}
 
+.social-icon-fb {
+    color: #3b5998;
+}
 
+.social-icon-tw {
+    color: #1da1f2;
+}
 
+.social-icon-ig {
+    color: #833AB4;
+}
 
+/*video btn*/
+.video-btn-container {
+    display: none;
+}
 
+@media screen and (min-width:768px) {
+    .video-btn-container {
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        z-index: 3;
+    }
+}
 
+.video-btn {
+    width: 5rem;
+    background: var(--yellow);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
 
+.video-switch-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 0.5rem;
+    background: var(--teal);
+    transition: all 0.3 ease;
+}
+
+.btn-slide {
+    left:50%;
+}
 
